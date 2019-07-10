@@ -1,4 +1,4 @@
-html{
+/* html{
   min-height: 100%;
 }
 
@@ -10,7 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url('/img/mario-bg.png') no-repeat;
+   background: url('/img/mario-bg.png') no-repeat; 
   background-size: 100%;
   background-position: bottom;
   background-color: #95e8f3;
@@ -30,4 +30,4 @@ form button, form h5 {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */

@@ -1,27 +1,23 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
-import Dashboard from './components/dashboard/Dashboard';
-import ProjectDetails from './components/projects/ProjectDetails'
-import SignIn from './components/auth/Signin';
-import SignUp from './components/auth/Signup';
-import CreateProject from './components/projects/CreateProject';
-
+import FormsPage from './components/projects/AddProject';
+import ListProducts from './components/projects/ListProduct';
+import PreviewProduct from './components/projects/PreviewProject';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-      <div className="App">
+        <div className="App">
           <Navbar name="Ogechi" />
           <Switch>
-            <Route exact path='/' component= { Dashboard } />
-            <Route path='/project/:id' component= {ProjectDetails} />
-            <Route path='/signin' component= {SignIn} />
-            <Route path='/signup' component= {SignUp} />
-            <Route path='/create' component= {CreateProject } />
+            <Route exact path="/" component={FormsPage} />
+            <Route path="/add" component={FormsPage} />
+            <Route path="/products" component={ListProducts} />
+            <Route path="/preview" component={PreviewProduct} />
           </Switch>
-      </div>
+        </div>
       </BrowserRouter>
     );
   }
