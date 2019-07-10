@@ -34,7 +34,7 @@ class FormsPage extends React.Component {
     if (isFormValid) {
       this.setState({ loading: true, disabled: true });
       await this.props.createProduct(this.state, image);
-      //this.props.history.push('/preview');
+      this.props.history.push('/preview');
     }
     return false;
   };
@@ -81,7 +81,7 @@ class FormsPage extends React.Component {
                 type="text"
                 id="defaultFormRegisterNameEx"
                 className="form-control"
-                placeholder="First name"
+                placeholder="Product Name"
                 required
               />
               <div className="valid-feedback">Looks good!</div>
@@ -103,7 +103,7 @@ class FormsPage extends React.Component {
                 type="text"
                 id="defaultFormRegisterEmailEx2"
                 className="form-control"
-                placeholder="Last name"
+                placeholder="description"
                 required
               />
               <div className="valid-feedback">Looks good!</div>
@@ -121,7 +121,9 @@ class FormsPage extends React.Component {
               <input
                 value={this.state.price}
                 onChange={this.changeHandler}
-                type="text"
+                type="number"
+                onInput="validity.valid||(value='');"
+                min="0"
                 id="defaultFormRegisterConfirmEx3"
                 className="form-control"
                 name="price"
