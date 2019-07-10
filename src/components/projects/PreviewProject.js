@@ -33,15 +33,17 @@ class PreviewProduct extends Component {
               waves
             />
             <MDBCardBody>
-              <MDBCardTitle>{singleProduct.name}</MDBCardTitle>
-              <MDBCardText>{singleProduct.description}</MDBCardText>
+              <MDBCardTitle>{singleProduct && singleProduct.name}</MDBCardTitle>
+              <MDBCardText>
+                {singleProduct && singleProduct.description}
+              </MDBCardText>
               <MDBCardFooter className="px-1">
                 <span className="float-left font-weight-bold">
-                  <strong>${singleProduct.price}</strong>
+                  <strong>${singleProduct && singleProduct.price}</strong>
                 </span>
                 <span className="float-right">
                   <strong>
-                    {singleProduct.color}
+                    {singleProduct && singleProduct.color}
                     {/* { value.createdAt && moment(value.createdAt.toDate()).fromNow()} */}
                   </strong>
                 </span>
